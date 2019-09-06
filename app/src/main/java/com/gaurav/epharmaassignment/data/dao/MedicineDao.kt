@@ -8,13 +8,13 @@ import com.gaurav.epharmaassignment.data.entity.Medicine
 interface MedicineDao {
 
     @Insert
-    fun saveMedicine(todoRecord: Medicine)
+    fun saveMedicine(medicine: Medicine)
 
     @Delete
-    fun deleteMedicine(todoRecord: Medicine)
+    fun deleteMedicine(medicine: Medicine)
 
     @Update
-    fun updateMedicine(todoRecord: Medicine)
+    fun updateMedicine(medicine: Medicine)
 
     @Query("SELECT * FROM medicine ORDER BY id DESC")
     fun getAllMedicine(): LiveData<List<Medicine>>
